@@ -1,0 +1,8 @@
+{"namespace": "cn.pojo",
+ "type": "record",
+ "name": "Customer",
+ "fields": [
+     {"name": "customerID", "type": ["int", "null"]},
+     {"name": "customerName",  "type": "string"}
+ ]
+}
