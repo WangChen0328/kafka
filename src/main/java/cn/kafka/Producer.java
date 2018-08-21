@@ -55,6 +55,9 @@ public class Producer implements Callback {
         Schema.Parser parser = new Schema.Parser();
         Schema schema = parser.parse(buffer.toString());
 
+        /**
+         * 没有进行复杂对象测试
+         */
         GenericRecord customer = new GenericData.Record(schema);
         customer.put("customerID", 6);
         customer.put("customerName", "赵六");
