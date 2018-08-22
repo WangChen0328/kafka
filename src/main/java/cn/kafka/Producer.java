@@ -24,7 +24,7 @@ public class Producer implements Callback {
     private static final StringBuffer buffer = new StringBuffer();
 
     static {
-        kafkaProp.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.31.106:9092,192.168.31.106:9093,192.168.31.106:9094");
+        kafkaProp.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.1.106:9092,192.168.1.106:9093,192.168.1.106:9094");
 
         kafkaProp.put(ProducerConfig.ACKS_CONFIG, "1");
         kafkaProp.put(ProducerConfig.RETRIES_CONFIG, "0");
@@ -32,7 +32,7 @@ public class Producer implements Callback {
         kafkaProp.put(ProducerConfig.LINGER_MS_CONFIG, "1");
         kafkaProp.put(ProducerConfig.BUFFER_MEMORY_CONFIG, "33554432");
 
-        kafkaProp.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://192.168.31.106:8083");
+        kafkaProp.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://192.168.1.106:8083");
 
         kafkaProp.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());
         kafkaProp.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());

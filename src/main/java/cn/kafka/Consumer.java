@@ -29,7 +29,7 @@ public class Consumer {
     private Map<TopicPartition, OffsetAndMetadata> currentOffsets = new HashMap<>();
 
     static {
-        kafkaProp.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.31.106:9092,192.168.31.106:9093,192.168.31.106:9094");
+        kafkaProp.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.1.106:9092,192.168.1.106:9093,192.168.1.106:9094");
 
         /**
          * kafka的config配置文件：consumer.properties文件里的group.id=test-consumer-group需要改成一致。
@@ -41,7 +41,7 @@ public class Consumer {
 
         kafkaProp.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 
-        kafkaProp.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://192.168.31.106:8083");
+        kafkaProp.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://192.168.1.106:8083");
 
         kafkaProp.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class.getName());
         kafkaProp.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class.getName());
